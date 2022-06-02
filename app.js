@@ -35,4 +35,18 @@ class App {
 
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
     }
+
+    onDown(e) {
+        this.mousePos.x = e.clientX;
+        this.mousePos.y = e.clientY;
+    }
+
+    onMove(e) {
+        this.mousePos.x = e.clientX;
+        this.mousePos.y = e.clientY;
+    }
+
+    onUp(e) {
+
+    }
 }

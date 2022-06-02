@@ -11,5 +11,16 @@ const HEIGHT = 260;
 export class Dialog {
     constructor() {
         this.pos = new Point();
+        this.target = new Point();
+        this.prevPos = new Point();
+        this.downpos = new Point();
+        this.speedpos = new Point();
+        this.startpos = new Point();
+        this.mousepos = new Point();
+        this.centerpos = new Point();
+        this.origin = new Point();
+        this.rotation = 0;
+        this.sideValue = 0;
+        this.isDown = false;
     }
 }
