@@ -1,4 +1,5 @@
 import {Point} from './point.js';
+import {Dialog} from './dialog.js';
 
 class App {
     constructor() {
