@@ -62,7 +62,15 @@ class App {
         this.mousePos.x = e.clientX;
         this.mousePos.y = e.clientY;
 
-        
+        for (let i = this.items.length - 1; i >= 0; i--) {
+            const item = this.items[i].down(this.mousePos.clone());
+            if (item) {
+                this.curItem = item;
+                const item = this.items.indexOf(item);
+                this.items.push(this.items.splice(index, 1)[0]);
+                break;
+            }
+        }
     }
 
     onMove(e) {
