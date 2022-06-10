@@ -42,6 +42,10 @@ export class Dialog {
         ctx.fillRect(this.pos.x, this.pos.y, WIDTH, HEIGHT);
     }
 
+    swingDrag(ctx) {
+
+    }
+    
     down(point) {
         if (point.collide(this.pos, WIDTH, HEIGHT)) {
             this.isDown = true;
