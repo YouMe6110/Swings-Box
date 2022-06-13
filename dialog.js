@@ -51,6 +51,15 @@ export class Dialog {
         rotation = rotation * (dx > 0 ? 1 : -1) - this.sideValue;
 
         this.rotation += (rotation - this.rotation) * ROTATE_SPEED;
+
+        const tmpPos = this.pos.clone().add(this.origin);
+        ctx.save();
+        ctx.translate(tmpPos.x, tmpPos.y);
+        ctx.rotate(this.rotation * Math.PI / 100);
+        ctx.beginPath();
+        ctx.fillStyle = '#f4e55a';
+        ctx.fillRect(-this.origin.x, -this.origin.y, WIDTH, HEIGHT);
+        ctx.restore();
     }
     
     down(point) {
